@@ -1,10 +1,11 @@
-import "./App.css";
-import Temp from "./temp";
+import React from "react";
+import "./index.css";
+import Routers from "./router/Router";
 
 function App() {
   return (
-    <div className="">
-      <Temp />
+    <div>
+      <Routers />
     </div>
   );
 }
