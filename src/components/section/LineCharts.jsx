@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+import { LineChart, Line, XAxis, YAxis, Tooltip } from "recharts";
 
 const data = [
   {
@@ -100,20 +92,18 @@ const LineCharts = () => {
 
   const chartData = processData(data);
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <LineChart width={300} height={100} data={chartData}>
-        <Line
-          type="monotone"
-          dataKey="count"
-          stroke="#8884d8"
-          strokeWidth={2}
-        />
-        <XAxis dataKey="day" />
-        <YAxis />
-        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-        <Tooltip />
-      </LineChart>
-    </ResponsiveContainer>
+    <LineChart width={600} height={300} data={chartData}>
+      <Line
+        type="monotone"
+        dataKey="count"
+        stroke="hsl(var(--primary))"
+        strokeWidth={3}
+      />
+      <XAxis dataKey="day" />
+      <YAxis />
+      {/* <CartesianGrid stroke="hsl(var(--primary))" strokeDasharray="5 5" /> */}
+      <Tooltip />
+    </LineChart>
   );
 };
 
