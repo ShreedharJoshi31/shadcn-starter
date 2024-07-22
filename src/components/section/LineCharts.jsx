@@ -100,20 +100,17 @@ const LineCharts = () => {
 
   const chartData = processData(data);
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <LineChart width={300} height={100} data={chartData}>
-        <Line
-          type="monotone"
-          dataKey="count"
-          stroke="#8884d8"
-          strokeWidth={2}
-        />
-        <XAxis dataKey="day" />
-        <YAxis />
-        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-        <Tooltip />
-      </LineChart>
-    </ResponsiveContainer>
+    <LineChart width={500} height={500} data={chartData}>
+      <Line
+        type="monotone"
+        dataKey="count"
+        stroke="hsl(var(--primary))"
+        strokeWidth={3}
+      />
+      <XAxis dataKey="day" />
+      <YAxis dataKey="count" />
+      <Tooltip />
+    </LineChart>
   );
 };
 
